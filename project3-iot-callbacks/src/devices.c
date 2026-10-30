@@ -176,7 +176,56 @@ void display_devices(DeviceList *list) {
     printf("Total: %lu device(s)\n", (unsigned long)list->count);
 }
 
-void remove_device(DeviceList *list) { 
-    (void)list; 
-    printf("[remove: not implemented yet]\n"); 
+static void list_shrink_if_sparse(DeviceList *list) {
+    size_t new_capacity = list->capacity / 2;
+    struct Device *smaller;
+
+    if (list->capacity <= INITIAL_CAPACITY || list->count > new_capacity) {
+        return;
+    }
+    if (new_capacity < INITIAL_CAPACITY) {
+        new_capacity = INITIAL_CAPACITY;
+    }
+
+    smaller = realloc(list->data, new_capacity * sizeof(struct Device));
+    if (smaller == NULL) {
+        return;
+    }
+
+    list->data = smaller;
+    list->capacity = new_capacity;
+    printf("(Memory shrunk: capacity is now %lu)\n", (unsigned long)list->capacity);
+}
+
+void remove_device(DeviceList *list) {
+    int id;
+    struct Device *p;
+    struct Device *end = list->data + list->count;
+
+    if (list->count == 0) {
+        printf("No devices to remove.\n");
+        return;
+    }
+    if (read_int("Enter ID of device to remove: ", &id) != 0) {
+        printf("Invalid ID.\n");
+        return;
+    }
+
+    for (p = list->data; p < end; p++)
+        if (p->id == id) {
+            break;
+        }
+
+    if (p == end) {
+        printf("No device with ID %d found.\n", id);
+        return;
+    }
+
+    printf("Removed: %d %s\n", p->id, p->name);
+
+    memmove(p, p + 1, (size_t)(end - p - 1) * sizeof(struct Device));
+    list->count--;
+
+    printf("Total devices: %lu\n", (unsigned long)list->count);
+    list_shrink_if_sparse(list);
 }
