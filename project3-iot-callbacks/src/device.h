@@ -59,4 +59,10 @@ void generate_readings(DeviceList *list);
 void process_readings(DeviceList *list);
 void display_alerts(DeviceList *list);
 void monitoring_summary(DeviceList *list);
+
+const char *type_name(DeviceType type);
+const char *type_unit(DeviceType type);
+const char *status_name(DeviceStatus status);
+void format_reading(const struct Device *d, char *buf, size_t size);
+
 #endif
