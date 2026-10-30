@@ -17,7 +17,7 @@ gcc -Wall -Wextra -std=c99 -o iot src/*.c
 - docs/demo_input.txt, docs/sample_output.txt: scripted demo run
 
 ## Evidence
-Reproduce the sample output with: ./iot < docs/demo_input.txt
-It shows 21 readings across the three device types, each handled by its own
+- Reproduce the sample output with: ./iot < docs/demo_input.txt
+- It shows 21 readings across the three device types, each handled by its own
 callback; normal readings and alerts; drift alerts; duplicate-ID rejection;
 registration (capacity 6 to 12) and removal (12 back to 6); all memory freed.
