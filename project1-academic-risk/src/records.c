@@ -223,10 +223,96 @@ void remove_student(StudentList *list) {
     list_shrink_if_sparse(list);
 }
 
+typedef int (*Comparator)(const void *, const void *);
+
+static int cmp_grade(const void *a, const void *b) {
+    const Student *x = a, *y = b;
+    return (x->grade < y->grade) - (x->grade > y->grade);
+}
+
+static int cmp_name(const void *a, const void *b) {
+    const Student *x = a, *y = b;
+    return strcmp(x->name, y->name);
+}
+
+static int cmp_id(const void *a, const void *b) {
+    const Student *x = a, *y = b;
+    return (x->id > y->id) - (x->id < y->id);
+}
+
 void sort_students(StudentList *list) {
-    (void)list; printf("[sort: not implemented yet]\n");
+    int choice;
+    Comparator cmp;
+
+    if (list->count < 2) {
+        printf("Not enough records to sort.\n");
+        return;
+    }
+
+    printf("Sort y: 1) Grade (high to low)  2) Name (A-Z)   3) ID\n");
+    if (read_int("Choose: ", &choice) != 0) {
+        printf("Invalid choice.\n");
+        return;
+    }
+
+    switch (choice) {
+        case 1: cmp = cmp_grade; break;
+        case 2: cmp = cmp_name; break;
+        case 3: cmp = cmp_id; break;
+        default:
+            printf("Invalid choice.\n");
+            return;
+    }
+
+    qsort(list->data, list->count, sizeof(Student), cmp);
+    printf("Sorted.\n");
+    display_students(list);
 }
 
 void search_student(StudentList *list) {
-    (void)list; printf("[search: not implemented yet]\n");
+    int choice;
+    const Student *p;
+    const Student *end = list->data + list->count;
+    int found = 0;
+
+    printf("Search by: 1) ID    2) Name\n");
+    if (read_int("Choose: ", &choice) != 0) {
+        printf("Invalid choice.\n");
+        return;
+    }
+
+    if (choice == 1) {
+        int id;
+        if (read_int("Enter ID: ", &id) != 0) {
+            printf("Invalid ID.\n");
+            return;
+        }
+        for (p = list->data; p < end; p++) {
+            if (p->id == id) {
+                printf("Found: %d | %s | %s | %.1f\n", p->id, p->name, p->course, p->grade);
+                found = 1;
+                break;
+            }
+        }
+    } else if (choice == 2) {
+        char name[NAME_LEN];
+        printf("Enter full name (exact match): ");
+        if (read_line(name, sizeof name) != 0 || name[0] == '\0') {
+            printf("Name cannot be empty.\n");
+            return;
+        }
+        for (p = list->data; p < end; p++) {
+            if (strcmp(p->name, name) == 0) {
+                printf("Found: %d | %s | %s | %.1f\n", p->id, p->name, p->course, p->grade);
+                found = 1;
+            }
+        }
+    } else {
+        printf("Invalid choice.\n");
+        return;
+    }
+
+    if (!found) {
+        printf("No matching student found.\n");
+    }
 }
