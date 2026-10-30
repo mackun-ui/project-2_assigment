@@ -1,7 +1,7 @@
 # Custom Analysis: Academic Risk Index (ARI)
 
 **Purpose:** Measures how far a student's grade falls below a safe level,
-so support can be prioritised. It goes beyond pass/fail: a student with 55
+so that support can be prioritised. It goes beyond pass/fail: a student with 55
 passes (threshold 50) but is already close to the danger zone.
 
 **Formula:** ARI = max(0, (60 - grade) / 60) x 100
