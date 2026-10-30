@@ -110,6 +110,7 @@ int main(void) {
         actions[choice - 1](&list);
     }
 
+    monitor_free();
     list_free(&list);
     printf("Memory released. Goodbye.\n");
     return 0;
