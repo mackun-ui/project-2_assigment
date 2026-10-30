@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include "student.h"
 
@@ -53,4 +54,24 @@ void list_free(StudentList *list) {
     list->data = NULL;
     list->count = 0;
     list->capacity = 0;
+}
+
+void add_student(StudentList *list) { 
+    (void)list; printf("[add: not implemented yet]\n");
+}
+
+void display_students(StudentList *list) {
+    (void)list; printf("[display: not implemented yet]\n");
+}
+
+void sort_students(StudentList *list) {
+    (void)list; printf("[sort: not implemented yet]\n");
+}
+
+void search_student(StudentList *list) {
+    (void)list; printf("[search: not implemented yet]\n");
+}
+
+void remove_student(StudentList *list) {
+    (void)list; printf("[remove: not implemented yet]\n");
 }
