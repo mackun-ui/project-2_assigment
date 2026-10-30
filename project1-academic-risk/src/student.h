@@ -1,3 +1,4 @@
+#include <stddef.h>
 #ifndef STUDENT_H
 #define STUDENT_H
 
@@ -12,5 +13,15 @@ typedef struct {
     char course[COURSE_LEN];
     float grade;
 } Student;
+
+typedef struct {
+    Student *data;
+    size_t count;
+    size_t capacity;
+} StudentList;
+
+int list_init(StudentList *list, size_t initial_capacity);
+int list_load_initial(StudentList *list);
+void list_free(StudentList *list);
 
 #endif
