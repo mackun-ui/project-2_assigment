@@ -37,4 +37,26 @@ struct Device {
     int has_prev;
 };
 
+typedef struct {
+    struct Device *data;
+    size_t count;
+    size_t capacity;
+} DeviceList;
+
+typedef void (*MenuAction)(DeviceList *list);
+
+int read_line(char *buf, size_t size);
+int read_int(const char *prompt, int *out);
+
+int list_init(DeviceList *list, size_t initial_capacity);
+int list_load_initial(DeviceList *list);
+void list_free(DeviceList *list);
+void register_device(DeviceList *list);
+void display_devices(DeviceList *list);
+void remove_device(DeviceList *list);
+
+void generate_readings(DeviceList *list);
+void process_readings(DeviceList *list);
+void display_alerts(DeviceList *list);
+void monitoring_summary(DeviceList *list);
 #endif
