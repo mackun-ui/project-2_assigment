@@ -6,6 +6,7 @@
 #define NAME_LEN    50
 #define COURSE_LEN  40
 #define PASS_THRESHOLD 50.0f
+#define SAFE_LEVEL  60.0f
 
 typedef struct {
     int id;
@@ -34,7 +35,6 @@ void display_students(StudentList *list);
 void sort_students(StudentList *list);
 void search_student(StudentList *list);
 void remove_student(StudentList *list);
-
 void calculate_average(StudentList *list);
 void find_top_student(StudentList *list);
 void custom_analysis(StudentList *list);
