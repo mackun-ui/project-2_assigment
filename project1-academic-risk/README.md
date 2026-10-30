@@ -15,6 +15,6 @@ gcc -Wall -Wextra -std=c99 -o academic src/*.c
 ## Evidence
 Reproduce the sample output with:
 ./academic < docs/demo_input.txt
-It shows memory growing 12 -> 24 when a student is added, shrinking
-24 -> 12 when removed, duplicate-ID and invalid-grade rejection, and
+It shows memory growing from 12 to 24 when a student is added, shrinking from
+24 to 12 when removed, duplicate-ID and invalid-grade rejection, and
 all memory released on exit.
