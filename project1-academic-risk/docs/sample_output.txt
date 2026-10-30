@@ -1,1 +1,305 @@
-placeholder
+====================================================
+Student ID: 0355272820
+Project: Dynamic Academic Performance and Risk Analysis Engine
+Custom Analysis: Academic Risk Index
+====================================================
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Course              Grade
+---------------------------------------------------------
+1001   Kwame Mensah           Programming in C     78.5
+1002   Ama Owusu              Programming in C     91.0
+1003   Kofi Boateng           Data Structures      45.0
+1004   Akosua Darko           Data Structures      62.5
+1005   Menes Adisso           Databases            38.0
+1006   Abena Osei             Databases            84.0
+1007   Kojo Appiah            Programming in C     55.0
+1008   Esi Quartey            Data Structures      97.5
+1009   David Achibiri         Databases            49.5
+1010   Efua Tetteh            Programming in C     70.0
+1011   Fiifi Annan            Data Structures      33.0
+1012   Samantha Tchwenko      Databases            66.0
+---------------------------------------------------------
+Total: 12 record(s)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Enter student ID (positive number): Error: ID 1001 already exists. Student not added.
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Enter student ID (positive number): Enter full name: Enter course: Enter grade (0-100): Invalid grade. It must be a number from 0 to 100.
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Enter student ID (positive number): Enter full name: Enter course: Enter grade (0-100): (Memory expanded: capacity is now 24)
+Student 1013 added. Total records: 13
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Course              Grade
+---------------------------------------------------------
+1001   Kwame Mensah           Programming in C     78.5
+1002   Ama Owusu              Programming in C     91.0
+1003   Kofi Boateng           Data Structures      45.0
+1004   Akosua Darko           Data Structures      62.5
+1005   Menes Adisso           Databases            38.0
+1006   Abena Osei             Databases            84.0
+1007   Kojo Appiah            Programming in C     55.0
+1008   Esi Quartey            Data Structures      97.5
+1009   David Achibiri         Databases            49.5
+1010   Efua Tetteh            Programming in C     70.0
+1011   Fiifi Annan            Data Structures      33.0
+1012   Samantha Tchwenko      Databases            66.0
+1013   Test Student           Databases            72.0
+---------------------------------------------------------
+Total: 13 record(s)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Enter ID of student to remove: Removed: 1013 Test Student
+Total records: 12
+(Memory shrunk: capacity is now 12)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Enter ID of student to remove: No student with ID 9999 found.
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Sort y: 1) Grade (high to low)  2) Name (A-Z)   3) ID
+Choose: Sorted.
+
+ID     Name                   Course              Grade
+---------------------------------------------------------
+1008   Esi Quartey            Data Structures      97.5
+1002   Ama Owusu              Programming in C     91.0
+1006   Abena Osei             Databases            84.0
+1001   Kwame Mensah           Programming in C     78.5
+1010   Efua Tetteh            Programming in C     70.0
+1012   Samantha Tchwenko      Databases            66.0
+1004   Akosua Darko           Data Structures      62.5
+1007   Kojo Appiah            Programming in C     55.0
+1009   David Achibiri         Databases            49.5
+1003   Kofi Boateng           Data Structures      45.0
+1005   Menes Adisso           Databases            38.0
+1011   Fiifi Annan            Data Structures      33.0
+---------------------------------------------------------
+Total: 12 record(s)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Average grade: 64.17 (across 12 students)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Top-performing students(s), grade 97.5:
+ 1008 | Esi Quartey | Data Structures
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Search by: 1) ID    2) Name
+Choose: Enter ID: Found: 1008 | Esi Quartey | Data Structures | 97.5
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Search by: 1) ID    2) Name
+Choose: Enter full name (exact match): Found: 1002 | Ama Owusu | Programming in C | 91.0
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: 
+=== Academic Risk Index (ARI) ===
+Purpose: show how far each student is below a safe grade, so
+         support can go to those who need it most.
+Formula: ARI = max(0, (60 - grade) / 60) x 100
+Levels : 0 = Safe (grade >= 60) | 0-25 Low | 25-50 Moderate | above 50 High
+Reading: higher ARI = further below the safe level. 0 = no risk,
+         100 = grade of 0.
+
+ID     Name                    Grade     ARI Level   
+-----------------------------------------------------
+1007   Kojo Appiah              55.0     8.3 Low     
+1009   David Achibiri           49.5    17.5 Low     
+1003   Kofi Boateng             45.0    25.0 Low     
+1005   Menes Adisso             38.0    36.7 Moderate
+1011   Fiifi Annan              33.0    45.0 Moderate
+-----------------------------------------------------
+Safe: 7 | Low: 3 | Moderate: 2 | High: 0
+Average class ARI: 11.04
+Highest-risk student: 1011 Fiifi Annan (grade 33.0)
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: 
+========= SUMMARY REPORT =========
+Total records: 12
+Average grade: 64.17
+Highest grade: 97.5 (Esi Quartey)
+Lowest grade : 33.0 (Fiifi Annan)
+Pass threshold: 50
+Meeting threshold: 8
+Below threshold  : 4
+
+-- Custom analysis: Academic Risk Index --
+Safe: 7 | Low: 3 | Moderate: 2 | High: 0
+Average class ARI: 11.04
+Highest-risk student: 1011 Fiifi Annan (ARI 45.0)
+=====================================
+
+----------------- MENU -----------------
+ 1. Add a student
+ 2. Display all students
+ 3. Sort students
+ 4. Calculate average grade
+ 5. Find top-performing student
+ 6. Search for a student
+ 7. Remove a student
+ 8. Run custom analysis (Academic Risk Index)
+ 9. Display summary report
+ 0. Exit
+----------------------------------------
+Choose an option: Memory released. Goodbye.
