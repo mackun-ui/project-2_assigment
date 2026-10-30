@@ -56,12 +56,115 @@ void list_free(StudentList *list) {
     list->capacity = 0;
 }
 
-void add_student(StudentList *list) { 
-    (void)list; printf("[add: not implemented yet]\n");
+static int id_exists(const StudentList *list, int id)
+{
+    const Student *p;
+    const Student *end = list->data + list->count;
+
+    for (p = list->data; p < end; p++)
+        if (p->id == id)
+            return 1;
+    return 0;
 }
 
-void display_students(StudentList *list) {
-    (void)list; printf("[display: not implemented yet]\n");
+static int read_grade(const char *prompt, float *out)
+{
+    char buf[32];
+    char *end;
+    double value;
+
+    printf("%s", prompt);
+    if (read_line(buf, sizeof buf) != 0)
+        return -2;
+    if (buf[0] == '\0')
+        return -1;
+
+    value = strtod(buf, &end);
+    if (*end != '\0' || !(value >= 0.0 && value <= 100.0))
+        return -1;
+
+    *out = (float)value;
+    return 0;
+}
+
+static int list_grow(StudentList *list)
+{
+    size_t new_capacity = list->capacity * 2;
+    Student *bigger = realloc(list->data, new_capacity * sizeof(Student));
+
+    if (bigger == NULL)
+        return -1;
+
+    list->data = bigger;
+    list->capacity = new_capacity;
+    return 0;
+}
+
+void add_student(StudentList *list)
+{
+    Student s;
+    int rc;
+
+    rc = read_int("Enter student ID (positive number): ", &s.id);
+    if (rc != 0 || s.id <= 0) {
+        printf("Invalid ID. Student not added.\n");
+        return;
+    }
+    if (id_exists(list, s.id)) {
+        printf("Error: ID %d already exists. Student not added.\n", s.id);
+        return;
+    }
+
+    printf("Enter full name: ");
+    if (read_line(s.name, sizeof s.name) != 0 || s.name[0] == '\0') {
+        printf("Name cannot be empty. Student not added.\n");
+        return;
+    }
+
+    printf("Enter course: ");
+    if (read_line(s.course, sizeof s.course) != 0 || s.course[0] == '\0') {
+        printf("Course cannot be empty. Student not added.\n");
+        return;
+    }
+
+    if (read_grade("Enter grade (0-100): ", &s.grade) != 0) {
+        printf("Invalid grade. It must be a number from 0 to 100.\n");
+        return;
+    }
+
+    if (list->count == list->capacity) {
+        if (list_grow(list) != 0) {
+            printf("Error: memory allocation failed. Student not added.\n");
+            return;
+        }
+        printf("(Memory expanded: capacity is now %lu)\n",
+               (unsigned long)list->capacity);
+    }
+
+    list->data[list->count] = s;
+    list->count++;
+    printf("Student %d added. Total records: %lu\n",
+           s.id, (unsigned long)list->count);
+}
+
+void display_students(StudentList *list)
+{
+    const Student *p;
+    const Student *end = list->data + list->count;
+    if (list->count == 0) {
+        printf("No student records to display.\n");
+        return;
+    }
+
+    printf("\n%-6s %-22s %-18s %6s\n", "ID", "Name", "Course", "Grade");
+    printf("---------------------------------------------------------\n");
+
+    for (p = list->data; p < end; p++)
+        printf("%-6d %-22.22s %-18.18s %6.1f\n",
+               p->id, p->name, p->course, p->grade);
+
+    printf("---------------------------------------------------------\n");
+    printf("Total: %lu record(s)\n", (unsigned long)list->count);
 }
 
 void sort_students(StudentList *list) {
