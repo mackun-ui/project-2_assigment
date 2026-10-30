@@ -3,6 +3,8 @@
 #include <string.h>
 #include "student.h"
 
+#define MIN_CAPACITY 12
+
 static const Student initial_data[] = {
     {1001, "Kwame Mensah",   "Programming in C", 78.5f},
     {1002, "Ama Owusu",      "Programming in C", 91.0f},
@@ -167,14 +169,64 @@ void display_students(StudentList *list)
     printf("Total: %lu record(s)\n", (unsigned long)list->count);
 }
 
+static void list_shrink_if_sparse(StudentList *list) {
+    size_t new_capacity = list->capacity / 2;
+    Student *smaller;
+
+    if (list->capacity <= MIN_CAPACITY || list->count > new_capacity)
+        return;
+    if (new_capacity < MIN_CAPACITY)
+        new_capacity = MIN_CAPACITY;
+    
+    smaller = realloc(list->data, new_capacity * sizeof(Student));
+
+    if (smaller == NULL)
+        return;
+    
+    list->data = smaller;
+    list->capacity = new_capacity;
+    printf("(Memory shrunk: capacity is now %lu)\n", (unsigned long)list->capacity);
+}
+
+void remove_student(StudentList *list) {
+    int id;
+    Student *p;
+    Student *end = list->data + list->count;
+
+    if (list->count == 0) {
+        printf("No records to remove.\n");
+        return;
+    }
+    if (read_int("Enter ID of student to remove: ", &id) != 0) {
+        printf("Invalid ID.\n");
+        return;
+    }
+
+    /* find the record by pointer traversal. */
+    for (p = list->data; p < end; p++) {
+        if (p->id == id)
+            break;
+    }
+
+    if (p == end) {
+        printf("No student with ID %d found.\n", id);
+        return;
+    }
+
+    printf("Removed: %d %s\n", p->id, p->name);
+
+    /* shift every record aftr p one slot to the left. */
+    memmove(p, p + 1, (size_t)(end -p - 1) * sizeof(Student));
+    list->count--;
+
+    printf("Total records: %lu\n", (unsigned long)list->count);
+    list_shrink_if_sparse(list);
+}
+
 void sort_students(StudentList *list) {
     (void)list; printf("[sort: not implemented yet]\n");
 }
 
 void search_student(StudentList *list) {
     (void)list; printf("[search: not implemented yet]\n");
-}
-
-void remove_student(StudentList *list) {
-    (void)list; printf("[remove: not implemented yet]\n");
 }
