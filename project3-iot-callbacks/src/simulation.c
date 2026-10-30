@@ -90,11 +90,71 @@ void process_readings(DeviceList *list)
     }
 }
 
-void display_alerts(DeviceList *list) { 
-    (void)list; 
-    printf("[alerts: not implemented yet]\n"); 
+void display_alerts(DeviceList *list) {
+    const struct Alert *a;
+    const struct Alert *end = monitor.alerts + monitor.alert_count;
+    unsigned long n = 1;
+
+    (void)list;
+
+    if (monitor.alert_count == 0) {
+        printf("No alerts detected so far.\n");
+        return;
+    }
+
+    printf("\n========== DETECTED ALERTS (%lu) ==========\n", (unsigned long)monitor.alert_count);
+
+    for (a = monitor.alerts; a < end; a++, n++) {
+        printf("Alert %lu\n", n);
+        printf("Device: %d  %s\n", a->device_id, a->device_name);
+        printf("Reading: %s\n", a->value_text);
+        printf("Expected: %s\n", a->range);
+        printf("Reason: %s\n", a->reason);
+        printf("Callback: %s\n", a->callback);
+    }
 }
-void monitoring_summary(DeviceList *list) { 
-    (void)list; 
-    printf("[summary: not implemented yet]\n"); 
+
+static const struct Device *find_device(const DeviceList *list, int id) {
+    const struct Device *p;
+    const struct Device *end = list->data + list->count;
+
+    for (p = list->data; p < end; p++) {
+        if (p->id == id) {
+            return p;
+        }
+    }
+    return NULL;
+}
+
+void monitoring_summary(DeviceList *list)
+{
+    int t;
+
+    printf("\n========== MONITORING SUMMARY ==========\n");
+    printf("Registered devices: %lu\n", (unsigned long)list->count);
+    printf("Readings processed: %lu\n", monitor.readings_processed);
+    printf("Normal readings: %lu\n", monitor.normal_readings);
+    printf("Abnormal readings: %lu\n", monitor.abnormal_readings);
+    printf("Total alerts raised: %lu\n", (unsigned long)monitor.alert_count);
+
+    printf("Alerts per device type:\n");
+    for (t = 0; t < NUM_TYPES; t++) {
+        printf("%-12s: %lu\n", type_name((DeviceType)t), monitor.alerts_by_type[t]);
+    }
+
+    printf("\n-- Custom callback: Sensor Drift Detector --\n");
+    printf("Drift checks performed: %lu\n", monitor.drift_checks);
+    printf("Drift alerts raised: %lu\n", monitor.drift_alerts);
+
+    if (monitor.drift_checks > 0) {
+        const struct Device *d = find_device(list, monitor.max_drift_id);
+        if (d != NULL) {
+            printf("Largest change seen: %.1f %s (device %d, %s)\n", monitor.max_drift, type_unit(d->type), d->id, d->name);
+        } else {
+             printf("Largest change seen: %.1f (device %d, since removed)\n", monitor.max_drift, monitor.max_drift_id);
+        }
+    } else {
+        printf("No drift checks yet (needs at least 2 rounds of readings).\n");
+    }
+    printf("=========================================\n");
 }
