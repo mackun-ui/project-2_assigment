@@ -1,1 +1,291 @@
-placeholder
+==================================================
+Student ID: 0355272820
+Project: Dynamic IoT Event Monitoring and Callback Engine
+Custom Callback: Sensor Drift Detector
+==================================================
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Status  
+----------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  --           NORMAL  
+102    Greenhouse Temp        Temperature  --           NORMAL  
+201    Pipeline Pressure      Pressure     --           NORMAL  
+202    Tank Pressure          Pressure     --           NORMAL  
+301    Solar Battery Bank     Battery      --           NORMAL  
+302    Sensor Node Battery    Battery      --           NORMAL  
+----------------------------------------------------------
+Total: 6 device(s)
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Enter device ID (positive number): Error: ID 101 already exists. Device not registered.
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Enter device ID (positive number): Enter device name: Type: 1) Temperature  2) Pressure  3) Battery voltage
+Choose type: (Memory expanded: capacity is now 12)
+Device 401 registered. Total devices: 7
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Status  
+----------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  --           NORMAL  
+102    Greenhouse Temp        Temperature  --           NORMAL  
+201    Pipeline Pressure      Pressure     --           NORMAL  
+202    Tank Pressure          Pressure     --           NORMAL  
+301    Solar Battery Bank     Battery      --           NORMAL  
+302    Sensor Node Battery    Battery      --           NORMAL  
+401    Backup Pressure Sensor Pressure     --           NORMAL  
+----------------------------------------------------------
+Total: 7 device(s)
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Generated 7 new reading(s). Use option 5 to process them.
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Callback             Result
+------------------------------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  37.4 C       temperature_monitor  NORMAL
+102    Greenhouse Temp        Temperature  33.3 C       temperature_monitor  NORMAL
+201    Pipeline Pressure      Pressure     115 kPa      pressure_monitor     NORMAL
+202    Tank Pressure          Pressure     105 kPa      pressure_monitor     NORMAL
+301    Solar Battery Bank     Battery      11.03 V      battery_monitor      NORMAL
+302    Sensor Node Battery    Battery      14.27 V      battery_monitor      ALERT: Battery voltage too high (overcharge risk) (battery_monitor)
+401    Backup Pressure Sensor Pressure     125 kPa      pressure_monitor     NORMAL
+Processed 7 reading(s). Total processed so far: 7
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Generated 7 new reading(s). Use option 5 to process them.
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Callback             Result
+------------------------------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  30.2 C       temperature_monitor  NORMAL
+102    Greenhouse Temp        Temperature  21.7 C       temperature_monitor  NORMAL
+201    Pipeline Pressure      Pressure     135 kPa      pressure_monitor     NORMAL
+202    Tank Pressure          Pressure     102 kPa      pressure_monitor     NORMAL
+301    Solar Battery Bank     Battery      11.69 V      battery_monitor      NORMAL
+302    Sensor Node Battery    Battery      13.88 V      battery_monitor      NORMAL
+401    Backup Pressure Sensor Pressure     127 kPa      pressure_monitor     NORMAL
+Processed 7 reading(s). Total processed so far: 14
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Generated 7 new reading(s). Use option 5 to process them.
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Callback             Result
+------------------------------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  11.9 C       temperature_monitor  ALERT: Temperature below minimum limit (temperature_monitor)
+102    Greenhouse Temp        Temperature  66.3 C       temperature_monitor  ALERT: Sudden change of 44.6 C since previous reading (sensor_drift_detector)
+201    Pipeline Pressure      Pressure     101 kPa      pressure_monitor     NORMAL
+202    Tank Pressure          Pressure     141 kPa      pressure_monitor     NORMAL
+301    Solar Battery Bank     Battery      11.01 V      battery_monitor      NORMAL
+302    Sensor Node Battery    Battery      14.48 V      battery_monitor      ALERT: Battery voltage too high (overcharge risk) (battery_monitor)
+401    Backup Pressure Sensor Pressure     134 kPa      pressure_monitor     NORMAL
+Processed 7 reading(s). Total processed so far: 21
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+========== DETECTED ALERTS (4) ==========
+Alert 1
+Device: 302  Sensor Node Battery
+Reading: 14.27 V
+Expected: 11.0 to 14.2 V
+Reason: Battery voltage too high (overcharge risk)
+Callback: battery_monitor
+Alert 2
+Device: 101  Boiler Temp Sensor
+Reading: 11.9 C
+Expected: 15 to 70 C
+Reason: Temperature below minimum limit
+Callback: temperature_monitor
+Alert 3
+Device: 102  Greenhouse Temp
+Reading: 66.3 C
+Expected: change <= 40.0 C between readings
+Reason: Sudden change of 44.6 C since previous reading
+Callback: sensor_drift_detector
+Alert 4
+Device: 302  Sensor Node Battery
+Reading: 14.48 V
+Expected: 11.0 to 14.2 V
+Reason: Battery voltage too high (overcharge risk)
+Callback: battery_monitor
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+========== MONITORING SUMMARY ==========
+Registered devices: 7
+Readings processed: 21
+Normal readings: 17
+Abnormal readings: 4
+Total alerts raised: 4
+Alerts per device type:
+Temperature : 2
+Pressure    : 0
+Battery     : 2
+
+-- Custom callback: Sensor Drift Detector --
+Drift checks performed: 14
+Drift alerts raised: 1
+Largest change seen: 44.6 C (device 102, Greenhouse Temp)
+=========================================
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Enter ID of device to remove: Removed: 401 Backup Pressure Sensor
+Total devices: 6
+(Memory shrunk: capacity is now 6)
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: 
+ID     Name                   Type         Reading      Status  
+----------------------------------------------------------
+101    Boiler Temp Sensor     Temperature  11.9 C       ALERT   
+102    Greenhouse Temp        Temperature  66.3 C       ALERT   
+201    Pipeline Pressure      Pressure     101 kPa      NORMAL  
+202    Tank Pressure          Pressure     141 kPa      NORMAL  
+301    Solar Battery Bank     Battery      11.01 V      NORMAL  
+302    Sensor Node Battery    Battery      14.48 V      ALERT   
+----------------------------------------------------------
+Total: 6 device(s)
+
+----------------- MENU -----------------
+ 1. Register a new device
+ 2. Display all devices
+ 3. Remove a device
+ 4. Generate simulated readings
+ 5. Process readings through callbacks
+ 6. Display detected alerts
+ 7. Generate monitoring summary
+ 0. Exit
+----------------------------------------
+Choose an option: Memory released. Goodbye.
