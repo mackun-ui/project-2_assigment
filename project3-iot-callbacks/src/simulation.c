@@ -72,10 +72,13 @@ void process_readings(DeviceList *list)
 
         if (p->status == STATUS_NORMAL) {
             printf("NORMAL\n");
-        } else if (monitor.alert_count > alerts_before) {
-            printf("ALERT: %s\n", monitor.alerts[monitor.alert_count - 1].reason);
         } else {
-            printf("ALERT\n");
+            size_t i;
+            printf("ALERT");
+            for (i = alerts_before; i < monitor.alert_count; i++) {
+                printf("%s %s (%s)", i == alerts_before ? ":" : ";", monitor.alerts[i].reason, monitor.alerts[i].callback);
+            }
+            printf("\n");
         }
         n++;
     }

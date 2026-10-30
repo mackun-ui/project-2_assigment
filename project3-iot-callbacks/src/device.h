@@ -22,6 +22,9 @@
 #define VOLTAGE_SIM_MAX 14.5f
 #define VOLTAGE_LIMIT_MIN 11.0f
 #define VOLTAGE_LIMIT_MAX 14.2f
+#define DRIFT_LIMIT_TEMP 40.0f
+#define DRIFT_LIMIT_PRESSURE 40.0f
+#define DRIFT_LIMIT_VOLTAGE 2.5f
 
 typedef enum {
     TYPE_TEMPERATURE = 0,
@@ -103,6 +106,7 @@ struct Monitor {
     unsigned long drift_checks;
     unsigned long drift_alerts;
     float max_drift;
+    int max_drift_id;
 };
 extern struct Monitor monitor;
 
@@ -114,5 +118,6 @@ void temperature_monitor(struct Device *d);
 void pressure_monitor(struct Device *d);
 void battery_monitor(struct Device *d);
 void monitor_free(void);
+void sensor_drift_detector(struct Device *d);
 
 #endif

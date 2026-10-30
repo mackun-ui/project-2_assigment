@@ -10,6 +10,8 @@ static const char *const callback_names[NUM_TYPES] = {
     "temperature_monitor", "pressure_monitor", "battery_monitor"
 };
 
+static const MonitorCallback drift_callback = sensor_drift_detector;
+
 const char *callback_name(DeviceType type) {
     int i = (int)type;
     return (i >= 0 && i < NUM_TYPES) ? callback_names[i] : "unknown";
@@ -83,6 +85,7 @@ void dispatch_reading(struct Device *d) {
 
     d->status = STATUS_NORMAL;
     process_device(d, type_callbacks[idx]);
+    process_device(d, drift_callback);
 
     monitor.readings_processed++;
     if (d->status == STATUS_ALERT) {
@@ -147,6 +150,42 @@ void battery_monitor(struct Device *d) {
         raise_alert(d, "battery_monitor", range, "Battery voltage too low (deep discharge risk)");
     } else if (v > VOLTAGE_LIMIT_MAX) {
         raise_alert(d, "battery_monitor", range, "Battery voltage too high (overcharge risk)");
+    }
+}
+
+void sensor_drift_detector(struct Device *d) {
+    float current, drift, limit;
+    char range[48];
+    char reason[64];
+
+    if (!d->has_prev) {
+        return;
+    }
+
+    switch (d->type) {
+        case TYPE_TEMPERATURE: limit = DRIFT_LIMIT_TEMP; break;
+        case TYPE_PRESSURE: limit = DRIFT_LIMIT_PRESSURE; break;
+        case TYPE_BATTERY: limit = DRIFT_LIMIT_VOLTAGE; break;
+        default: return;
+    }
+
+    current = reading_as_float(d);
+    drift = current - d->prev_value;
+    if (drift < 0.0f) {
+        drift = -drift;
+    }
+
+    monitor.drift_checks++;
+    if (drift > monitor.max_drift) {
+        monitor.max_drift = drift;
+        monitor.max_drift_id = d->id;
+    }
+
+    if (drift > limit) {
+        monitor.drift_alerts++;
+        snprintf(range, sizeof range, "change <= %.1f %s between readings", limit, type_unit(d->type));
+        snprintf(reason, sizeof reason, "Sudden change of %.1f %s since previous reading", drift, type_unit(d->type));
+        raise_alert(d, "sensor_drift_detector", range, reason);
     }
 }
 
