@@ -1,0 +1,593 @@
+==================================================
+Student ID: 0355272820
+Project: Dynamic Text Mining and Linguistic Pattern Analyzer
+Source: Common Sense by Thomas Paine (1776)
+Custom Analysis: Lexical Diversity Score
+==================================================
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Total words: 178
+Distinct words: 102
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Longest word: "incomprehensible" (16 characters)
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Most frequent word: "the" (19 times, 10.7% of all words)
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: 
+No.   Word                   Count
+-------------------------------------
+1     some                   2
+2     writers                1
+3     have                   1
+4     explained              1
+5     the                    19
+6     english                1
+7     constitution           2
+8     thus                   1
+9     king                   3
+10    say                    1
+11    they                   4
+12    is                     2
+13    one                    1
+14    people                 4
+15    another                1
+16    peers                  1
+17    are                    3
+18    an                     1
+19    house                  2
+20    in                     2
+21    behalf                 2
+22    of                     8
+23    commons                1
+24    but                    1
+25    this                   2
+26    hath                   1
+27    all                    1
+28    distinctions           1
+29    a                      6
+30    divided                1
+31    against                1
+32    itself                 1
+33    and                    5
+34    though                 2
+35    expressions            1
+36    be                     5
+37    pleasantly             1
+38    arranged               1
+39    yet                    2
+40    when                   2
+41    examined               1
+42    appear                 1
+43    idle                   1
+44    ambiguous              1
+45    it                     1
+46    will                   2
+47    always                 2
+48    happen                 1
+49    that                   2
+50    nicest                 1
+51    construction           1
+52    words                  2
+53    capable                1
+54    applied                1
+55    to                     5
+56    description            2
+57    thing                  1
+58    which                  4
+59    either                 1
+60    cannot                 2
+61    exist                  2
+62    or                     1
+63    too                    1
+64    incomprehensible       1
+65    within                 1
+66    compass                1
+67    sound                  1
+68    only                   1
+69    may                    1
+70    amuse                  1
+71    ear                    1
+72    inform                 1
+73    mind                   1
+74    for                    1
+75    explanation            1
+76    includes               1
+77    previous               1
+78    question               1
+79    viz                    1
+80    how                    1
+81    came                   1
+82    by                     1
+83    power                  4
+84    afraid                 1
+85    trust                  1
+86    obliged                1
+87    check                  1
+88    such                   2
+89    could                  1
+90    not                    1
+91    gift                   1
+92    wise                   1
+93    neither                1
+94    can                    1
+95    any                    1
+96    needs                  1
+97    checking               1
+98    from                   1
+99    god                    1
+100   provision              1
+101   makes                  1
+102   supposes               1
+-------------------------------------
+102 distinct word(s), 178 in total
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Sort by: 1) Alphabetical (A-Z)  2) Frequency (high to low)
+Choose: Sorted 102 words. First 10 entries:
+  a                      6
+  afraid                 1
+  against                1
+  all                    1
+  always                 2
+  ambiguous              1
+  amuse                  1
+  an                     1
+  and                    5
+  another                1
+Use option 4 to see the full sorted list.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Sort by: 1) Alphabetical (A-Z)  2) Frequency (high to low)
+Choose: Sorted 102 words. First 10 entries:
+  the                    19
+  of                     8
+  a                      6
+  and                    5
+  be                     5
+  to                     5
+  people                 4
+  power                  4
+  they                   4
+  which                  4
+Use option 4 to see the full sorted list.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Enter a word to search for: "king" appears 3 time(s) (1.7% of all words), entry #12 in the list.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Enter a word to search for: "power" appears 4 time(s) (2.2% of all words), entry #8 in the list.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Enter a word to search for: "zebra" does not appear in the text.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: 
+========== TEXT SUMMARY ==========
+Source: Common Sense by Thomas Paine (1776)
+Characters: 1021
+Total words: 178
+Distinct words: 102
+Average word length: 4.58 characters
+Longest word: incomprehensible (16 characters)
+Most frequent: the (19 times)
+
+-- Custom analysis: Lexical Diversity Score --
+LDS: 57.3% (High)
+Words used once: 72
+==================================
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: 
+=== Lexical Diversity Score (LDS) ===
+Purpose: shows how varied the vocabulary of the text is.
+Formula: LDS = distinct words / total words x 100
+Levels: 70+ Very high | 50-69 High | 30-49 Moderate | below 30 Low
+Reading: a low score means the same words keep coming back; a high
+score means most words appear only once. Short texts score
+higher because they have less room to repeat.
+
+Total words: 178
+Distinct words: 102
+LDS: 57.3% (High)
+Words used once: 72 (70.6% of distinct words)
+Words repeated: 30
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Word to inspect (press Enter for the first entry): 
+Memory Inspection
+--------------------------
+Text buffer address: 000001BE9D2827A0
+Word statistics array: 000001BE9D282BB0
+Selected word-stat entry: 000001BE9D282BB0  ("the", entry #1)
+Analyzer struct (stack): 000000079DFFFB30
+
+What each address is:
+- Text buffer: heap block holding the paragraph; 1024 bytes allocated, 1021 used. Allocated or grown 5 time(s).
+- Word statistics: heap block of 128 entries x 44 bytes (102 in use). Grown 3 time(s) after the first allocation.
+- Selected entry: sits 0 bytes after the start of the array (index x sizeof(struct wordStat)).
+- Analyzer struct: a local variable in main() on the stack. It stores the two heap pointers above.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Paste or type your paragraph. Finish with an empty line.
+New paragraph loaded.
+Loaded 48 characters. Buffer: 64 bytes allocated, grew 1 time(s).
+Words: 9 total, 7 distinct.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Total words: 9
+Distinct words: 7
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: 
+No.   Word                   Count
+-------------------------------------
+1     don't                  1
+2     stop                   1
+3     it's                   1
+4     a                      1
+5     well-known             1
+6     fact                   1
+7     the                    3
+-------------------------------------
+7 distinct word(s), 9 in total
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: 
+========== TEXT SUMMARY ==========
+Source: Text entered by the user
+Characters: 48
+Total words: 9
+Distinct words: 7
+Average word length: 4.11 characters
+Longest word: well-known (10 characters)
+Most frequent: the (3 times)
+
+-- Custom analysis: Lexical Diversity Score --
+LDS: 77.8% (Very high)
+Words used once: 6
+==================================
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Paste or type your paragraph. Finish with an empty line.
+New paragraph loaded.
+Loaded 46 characters. Buffer: 64 bytes allocated, grew 1 time(s).
+Words: 1 total, 1 distinct.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Total words: 1
+Distinct words: 1
+Words cut to 39 letters: 1
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Paste or type your paragraph. Finish with an empty line.
+Empty input: keeping the current text.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Total words: 1
+Distinct words: 1
+Words cut to 39 letters: 1
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Built-in paragraph loaded: Common Sense by Thomas Paine (1776)
+Loaded 1021 characters. Buffer: 1024 bytes allocated, grew 5 time(s).
+Words: 178 total, 102 distinct.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Word to inspect (press Enter for the first entry): 
+Memory Inspection
+--------------------------
+Text buffer address: 000001BE9D2892C0
+Word statistics array: 000001BE9D2896D0
+Selected word-stat entry: 000001BE9D2896D0  ("some", entry #1)
+Analyzer struct (stack): 000000079DFFFB30
+
+What each address is:
+- Text buffer: heap block holding the paragraph; 1024 bytes allocated, 1021 used. Allocated or grown 5 time(s).
+- Word statistics: heap block of 128 entries x 44 bytes (102 in use). Grown 3 time(s) after the first allocation.
+- Selected entry: sits 0 bytes after the start of the array (index x sizeof(struct wordStat)).
+- Analyzer struct: a local variable in main() on the stack. It stores the two heap pointers above.
+
+----------------- MENU -----------------
+1. Count words
+2. Longest word
+3. Most frequent word
+4. Display word statistics
+5. Sort word statistics
+6. Search for a word
+7. Text summary
+8. Custom analysis (Lexical Diversity Score)
+9. Memory inspection
+10. Enter or paste a new paragraph
+11. Reload the built-in paragraph
+0. Exit
+----------------------------------------
+Choose an option: Memory released. Goodbye.
