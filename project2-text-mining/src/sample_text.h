@@ -1,0 +1,19 @@
+#ifndef SAMPLE_TEXT_H
+#define SAMPLE_TEXT_H
+
+#define SAMPLE_TITLE  "Common Sense"
+#define SAMPLE_AUTHOR "Thomas Paine (1776)"
+
+#define SAMPLE_TEXT \
+    "Some writers have explained the English constitution thus; the king, say they, is one, the people another; " \
+    "the peers are an house in behalf of the king; the commons in behalf of the people; " \
+    "but this hath all the distinctions of a house divided against itself; " \
+    "and though the expressions be pleasantly arranged, yet when examined they appear idle and ambiguous; " \
+    "and it will always happen, that the nicest construction that words are capable of, when applied to the description of some thing " \
+    "which either cannot exist, or is too incomprehensible to be within the compass of description, will be words of sound only, " \
+    "and though they may amuse the ear, they cannot inform the mind, for this explanation includes a previous question, viz. " \
+    "How came the king by a power which the people are afraid to trust, and always obliged to check? " \
+    "Such a power could not be the gift of a wise people, neither can any power, which needs checking, be from God; " \
+    "yet the provision, which the constitution makes, supposes such a power to exist."
+
+#endif
